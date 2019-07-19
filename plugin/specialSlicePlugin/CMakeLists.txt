@@ -13,25 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-set(OPENSOURCE_SAMPLES_LIST
-    sampleCharRNN
-    sampleFasterRCNN
-    sampleGoogleNet
-    sampleINT8
-    sampleINT8API
-    sampleMLP
-    sampleMNIST
-    sampleMNISTAPI
-    sampleMovieLens
-    sampleOnnxMNIST
-    samplePlugin
-    sampleSSD
-    sampleUffMaskRCNN
-    sampleUffMNIST
-    sampleUffSSD
-    trtexec
-)
-
-foreach(SAMPLE_ITER ${OPENSOURCE_SAMPLES_LIST})
-    add_subdirectory(${SAMPLE_ITER})
-endforeach(SAMPLE_ITER)
+file(GLOB SRCS *.cpp *.cu)
+set(PLUGIN_SOURCES ${PLUGIN_SOURCES} ${SRCS})
+set(PLUGIN_SOURCES ${PLUGIN_SOURCES} PARENT_SCOPE)

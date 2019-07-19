@@ -44,6 +44,11 @@ set(PLUGIN_LISTS
     cropAndResizePlugin
     proposalPlugin
     batchTilePlugin
+    detectionLayerPlugin
+    proposalLayerPlugin
+    pyramidROIAlignPlugin
+    resizeNearestPlugin
+    specialSlicePlugin
     )
 
 include_directories(common common/kernels)

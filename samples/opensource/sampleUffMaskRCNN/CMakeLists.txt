@@ -13,25 +13,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-set(OPENSOURCE_SAMPLES_LIST
-    sampleCharRNN
-    sampleFasterRCNN
-    sampleGoogleNet
-    sampleINT8
-    sampleINT8API
-    sampleMLP
-    sampleMNIST
-    sampleMNISTAPI
-    sampleMovieLens
-    sampleOnnxMNIST
-    samplePlugin
-    sampleSSD
-    sampleUffMaskRCNN
-    sampleUffMNIST
-    sampleUffSSD
-    trtexec
+set(SAMPLE_SOURCES
+    sampleUffMaskRCNN.cpp
 )
 
-foreach(SAMPLE_ITER ${OPENSOURCE_SAMPLES_LIST})
-    add_subdirectory(${SAMPLE_ITER})
-endforeach(SAMPLE_ITER)
+set(SAMPLE_PARSERS "uff")
+set(PLUGINS_NEEDED ON)
+
+include(../../CMakeSamplesTemplate.txt)
