@@ -27,7 +27,7 @@ This sample creates and runs the TensorRT engine from an ONNX model of the MNIST
 
 Specifically, this sample:
 - [Converts the ONNX model to a TensorRT network](#converting-the-onnx-model-to-a-tensorrt-network)
-- [Builds an engine](#building-an-engine)
+- [Builds an engine](#building-the-engine)
 - [Runs inference using the generated TensorRT network](#running-inference)
 
 ### Converting the ONNX model to a TensorRT network
